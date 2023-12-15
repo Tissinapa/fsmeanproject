@@ -31,11 +31,23 @@ app.use(cors())
 
 
 // Static folder
-
 app.use(express.static(path.join(__dirname, 'public')))
 
 //Bodyparser middleware
 app.use(bodyparser.json())
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  }))
+
+// Passport middleware
+app.use(passport.initialize())
+app.use(passport.session())
+
+require('./config/passport')(passport)
 
 app.use("/users",users)
 
