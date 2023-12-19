@@ -72,20 +72,21 @@ router.get('/profile', (req, res, next)=>{
     res.send("profile")
 })
 
-/* router.post('/pictures', upload.single('img'), (req, res, next)=>{
-    let newPicture = new User({
-        description: req.body.description,
+/* router.post('/notes', (req, res, next)=>{
+    let newNote = new User({
+        title: req.body.title,
+        memo: req.body.memo,
         user: User._id
     })
-    User.addPicture(newPicture, (err,user)=>{
+    User.addNote(newNote, (err,user)=>{
         if(err){
-            res.json({success: false, msg: "Failed to register"})
+            res.json({success: false, msg: "Failed to add note"})
         } else {
-            res.json({success: true, msg: "User registered"})
+            res.json({success: true, msg: "New note added"})
         }
     })
-})
- */
+}) */
+
 
 
 

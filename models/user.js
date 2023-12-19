@@ -21,24 +21,21 @@ const UserSchema = new Schema({
         required: true
     }
 })
-const PictureShema = new Schema({
-    image:{
-        type: Buffer,
+const NoteShema = new Schema({
+
+    title:{
+        type: String,
         required: true
     },
-    description: {
+    memo: {
         type: String,
         required: true,
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    }
+
 })
 
 const User = module.exports = mongoose.model('User', UserSchema)
-const Picture = mongoose.model('Picture', PictureShema);
+const Note = mongoose.model('Note', NoteShema);
 
 
 module.exports.getUserById = function(id, callback){
@@ -75,12 +72,13 @@ module.exports.getPictureById = function(id, callback){
         }
     });
 }
-module.exports.addPicture = function(newPicture,callback){
-    const image = new Picture(newPicture)
-    image.save((err, savedPicture)=>{
-        if(err){
-            console.log("Error saving picture")
-        }
-        callback(null,savedPicture)
+
+/* module.exports.addNote = function(newNote,  callback){
+    let addnewNote = new Note({
+        title: newNote.title, 
+        memo: newNote.memo,
+        user: newNote.user
     })
-}
+    addnewNote.save(callback)
+
+} */
