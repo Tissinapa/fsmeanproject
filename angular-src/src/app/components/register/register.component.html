@@ -2,21 +2,21 @@
 <form (submit)="onRegisterSubmit()">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" [(ngModel)]="name" name="name" class="form-control">
+    <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name">
   </div>
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" [(ngModel)]="Username" name="Username" class="form-control">
+    <input type="text" [(ngModel)]="username" name="username" class="form-control" id="username">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" [(ngModel)]="email" name="email" class="form-control">
+    <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email">
   </div>
 
   <div class="form-group">
     <label for="Password">Password</label>
-    <input type="Password" [(ngModel)]="Password" name="Password" class="form-control">
+    <input type="Password" [(ngModel)]="password" name="password" class="form-control" id="password">
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="submit" class="btn btn-primary" value="Submit">
 </form>
