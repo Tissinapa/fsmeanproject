@@ -38,8 +38,8 @@ const User = module.exports = mongoose.model('User', UserSchema)
 const Note = mongoose.model('Note', NoteShema);
 
 
-module.exports.getUserById = function(id, callback){
-    User.findById(id,callback)
+module.exports.getUserById = function(id, callback) {
+    User.findById(id, callback)
 }
 
 module.exports.getUserByUsername = function(username, callback){
