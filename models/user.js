@@ -21,21 +21,9 @@ const UserSchema = new Schema({
         required: true
     }
 })
-const NoteShema = new Schema({
 
-    title:{
-        type: String,
-        required: true
-    },
-    memo: {
-        type: String,
-        required: true,
-    },
+const User = module.exports = mongoose.model('User', UserSchema);
 
-})
-
-const User = module.exports = mongoose.model('User', UserSchema)
-const Note = mongoose.model('Note', NoteShema);
 
 
 module.exports.getUserById = function(id, callback) {
@@ -63,7 +51,7 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
     })
 }
 
-module.exports.getPictureById = function(id, callback){
+/* module.exports.getPictureById = function(id, callback){
     Picture.findById(somePictureId).populate('user').exec((err, picture) => {
         if (err) {
             console.error(err);
@@ -71,14 +59,6 @@ module.exports.getPictureById = function(id, callback){
             console.log(picture);
         }
     });
-}
-
-/* module.exports.addNote = function(newNote,  callback){
-    let addnewNote = new Note({
-        title: newNote.title, 
-        memo: newNote.memo,
-        user: newNote.user
-    })
-    addnewNote.save(callback)
-
 } */
+
+

@@ -4,6 +4,7 @@ const passport = require('passport')
 const jwt = require('jsonwebtoken')
 const config = require('../config/database');
 const User = require('../models/user')
+const Note = require('../models/note')
 const multer = require('multer')
 
 
@@ -72,23 +73,18 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
     res.json({user: req.user});
   });
 
-/* router.post('/notes', (req, res, next)=>{
-    let newNote = new User({
+router.post('/addnote', (req, res, next) => {
+    let newNote = new Note({
         title: req.body.title,
-        memo: req.body.memo,
-        user: User._id
+        memo: req.body.memo
     })
-    User.addNote(newNote, (err,user)=>{
+    Note.addNote(newNote,(err,note)=>{
         if(err){
-            res.json({success: false, msg: "Failed to add note"})
-        } else {
-            res.json({success: true, msg: "New note added"})
+            res.json({success: false, message: "Failed to add note"})
+        }else{
+            res.json({success: true, message:"Note added"})
         }
     })
-}) */
-
-
-
-
+});
 
 module.exports = router

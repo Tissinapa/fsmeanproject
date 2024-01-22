@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  formDataArray: any[] = [];
+  formData = {
+    title: '',
+    url: ''
+  };
+  submitted = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  submitForm() {
+    this.submitted = true;
+  }
 }
+
+
