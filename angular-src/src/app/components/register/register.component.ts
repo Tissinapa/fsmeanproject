@@ -32,10 +32,7 @@ export class RegisterComponent implements OnInit {
       username: this.username,
       password: this.password
     }
-    console.log(this.name)
-    console.log(this.username)
-    console.log(this.email)
-    console.log(this.password)
+
     //required fields
     if(!this.validateService.validateRegister(user)){
       this.flashMessage.show("Please fill all fields", {cssClass: 'alert-danger', timeout: 3000})

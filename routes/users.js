@@ -87,4 +87,16 @@ router.post('/addnote', (req, res, next) => {
     })
 });
 
+router.get("/notes",(req,res,next)=>{
+    Note.find((err,data)=>{
+        if(err){
+          console.log(err)
+        }else{
+          res.send(data)
+        }
+    })
+})
+
+
+
 module.exports = router

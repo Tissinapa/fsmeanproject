@@ -23,5 +23,11 @@ module.exports.getNotesById = function(id, callback) {
 }
 
 module.exports.addNote = function(newNote, callback) {
-    newNote.save(callback); 
+    newNote.save(function (err, savedNote) {
+        if (err) {
+            return callback(err, null);
+        }
+        return callback(null, savedNote);
+    });
 }
+
