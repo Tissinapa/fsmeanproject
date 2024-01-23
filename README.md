@@ -10,31 +10,31 @@ open folder that you just downloaded
 
 Install the dependencies
 
-npm install
+`npm install`
 
 If you don't have nodemon installed then use this command 
 
-npm install nodemon 
+`npm install nodemon `
 
 Then use 
 
-npm run dev
+`npm run dev`
 
 
 Split terminal
 
 go to angular-src using 
 
-cd angular-src
+`cd angular-src`
 
 Then use 
 
-ng serve
+`ng serve`
 
-If there is error open incaseoferror.jpg 
+If there is error open incaseoferror.jpg or follow the link to it: https://github.com/Tissinapa/fsmeanproject/blob/main/incaseoferror.jpg
 
 My apologies i really don't know how to deal this error otherwise.
 
-noerror.jpg show how the file looks when its working
+noerror.jpg show how the file looks when its working: https://github.com/Tissinapa/fsmeanproject/blob/main/noerror.jpg
 
 Project runs on http://localhost:4200
