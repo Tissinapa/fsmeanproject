@@ -37,4 +37,4 @@ My apologies i really don't know how to deal this error otherwise.
 
 noerror.jpg show how the file looks when its working: https://github.com/Tissinapa/fsmeanproject/blob/main/noerror.jpg
 
-Project runs on http://localhost:4200
+When everything is working the project runs on http://localhost:4200
